@@ -1,0 +1,36 @@
+MDBoxLayout:
+	orientation: 'vertical'
+	MDToolbar:
+		title: 'SpeedDial'
+		left_action_items: [['menu']]
+
+	MDScreen:
+
+
+
+		MDLabel:
+			id: mylabel
+			text: 'Alguma Coisa'
+			halign: 'center'
+
+		MDFloatingActionButtonSpeedDial:
+			data: app.data
+			root_button_anim: True
+			# Mudando as Cores
+			#label_text_color: 1,0,0,1 #Text Color
+			#bg_color_stack_button: 1,0,0,1 # Bg of icon
+			#bg_color_root_button: 1,0,0,1 # speeddial bg color
+			#color_icon_root_button: 1,0,0,1 #speeddial text color
+			bg_hint_color: 1,0,0,1
+
+			#pushing callback
+			callback: app.callback
+
+			#Open or Close
+			on_open: app.open()
+			on_close: app.close()
+
+
+
+
+
